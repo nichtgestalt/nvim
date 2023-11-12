@@ -19,12 +19,13 @@ local map = vim.api.nvim_set_keymap
 map('n', '<leader>f', 'za', {noremap = true, silent = false})
 
 map('n', '<leader>wm',   ':e ~/.config/bspwm/bspwmrc<CR>',		{noremap = true, silent = false})
-map('n', '<leader>bar',  ':e ~/.config/polybar/config.ini',		{noremap = true, silent = false})
-map('n', '<leader>term', ':e ~/.config/alacritty/alacritty.yml',	{noremap = true, silent = false})
-map('n', '<leader>vic',  ':e ~/.config/nvim/init.lua',			{noremap = true, silent = false})
+map('n', '<leader>ba',   ':e ~/.config/polybar/config.ini',		{noremap = true, silent = false})
+map('n', '<leader>te',   ':e ~/.config/alacritty/alacritty.yml',	{noremap = true, silent = false})
+map('n', '<leader>vi',   ':e ~/.config/nvim/init.lua',			{noremap = true, silent = false})
 map('n', '<leader>pic',  ':e ~/.config/picom/picom.conf',		{noremap = true, silent = false})
-map('n', '<leader>bac',  ':e ~/.bashrc',				{noremap = true, silent = false})
-map('n', '<leader>keys', ':e ~/.config/sxhkd/prototype-sxhkdrc',	{noremap = true, silent = false})
+map('n', '<leader>sh',   ':e ~/.bashrc',				{noremap = true, silent = false})
+map('n', '<leader>ke',   ':e ~/.config/sxhkd/prototype-sxhkdrc',	{noremap = true, silent = false})
+map('n', '<leader>no',   ':e ~/.Dokumente/notes.txt',			{noremap = true, silent = false})
 
 
 -- {{{ Set Colorscheme
