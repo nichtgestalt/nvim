@@ -1,23 +1,44 @@
 -- Neovim Config
 
--- Plugins
+-- {{{ Plugins
 require('bootstrap-packer')
 require('packer-plugins')
 require('neovide')
+--}}}
 
 -- General Settings
-vim.g.mapleader = " "
---vim.o.relativenumber = true
+vim.wo.relativenumber = true
+vim.cmd([[
+  set foldmethod=marker
+]])
 
--- Set Colorscheme
+-- Key Bindings
+vim.g.mapleader = " "
+local map = vim.api.nvim_set_keymap
+--map('n', '<C-h>', 'za', {noremap = true, silent = false})
+map('n', '<leader>f', 'za', {noremap = true, silent = false})
+
+map('n', '<leader>wm',   ':e ~/.config/bspwm/bspwmrc<CR>',		{noremap = true, silent = false})
+map('n', '<leader>bar',  ':e ~/.config/polybar/config.ini',		{noremap = true, silent = false})
+map('n', '<leader>term', ':e ~/.config/alacritty/alacritty.yml',	{noremap = true, silent = false})
+map('n', '<leader>vic',  ':e ~/.config/nvim/init.lua',			{noremap = true, silent = false})
+map('n', '<leader>pic',  ':e ~/.config/picom/picom.conf',		{noremap = true, silent = false})
+map('n', '<leader>bac',  ':e ~/.bashrc',				{noremap = true, silent = false})
+map('n', '<leader>keys', ':e ~/.config/sxhkd/prototype-sxhkdrc',	{noremap = true, silent = false})
+
+
+-- {{{ Set Colorscheme
 --require('onedark').load()
 --vim.cmd[[colorscheme nord]]
 vim.cmd[[colorscheme NeoSolarized]]
 vim.cmd[[let g:transparent_enabled = v:true]]
--- wiki
+-- }}}
+-- {{{ vimwiki 
 vim.g.vimwiki_list = { { path = '~/Notizblock/.src/vimwiki', syntax = 'markdown', ext = '.md' } }
--- /comfy/ Note taking
+--}}}
+-- /comfy/ Note taking {{{
 vim.api.nvim_create_autocmd({"BufWritePost"}, {
 	pattern = {"*.ms"},
 	command = '!buildnote %:p',
 })
+-- }}}
