@@ -2,6 +2,7 @@
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use 'ap/vim-css-color'
+	use 'xiyaowong/transparent.nvim'
 	-- comfy
 	use 'preservim/vim-pencil'
 	use 'vimwiki/vimwiki'
@@ -9,6 +10,9 @@ return require('packer').startup(function(use)
 	use 'navarasu/onedark.nvim'
 	use 'shaunsingh/nord.nvim'
 	use 'NTBBloodbath/doom-one.nvim'
+	use 'tjdevries/colorbuddy.nvim'
+	use 'overcache/NeoSolarized'
+	use 'svrana/neosolarized.nvim'
 	-- Dashboard
 	use { 
 		'glepnir/dashboard-nvim',
