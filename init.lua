@@ -37,7 +37,3 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
   pattern = {"*.md", "*.ms", "*.rec"},
   command = ":SoftPencil",
 })
-vim.api.nvim_create_autocmd({"BufEnter"}, {
-  pattern = {"*.md", "*.ms"},
-  command = ":ZenMode",
-})
